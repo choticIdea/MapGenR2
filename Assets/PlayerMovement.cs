@@ -60,6 +60,27 @@ public class PlayerMovement : MonoBehaviour
         currentLocation = nextLoc;
         currentLocation.BroadCastCanMove();
         transform.position = nextLoc.transform.position;
-        GameManager.singleton.ChangeTime(road.hCost,road.mCost);
+        // This snippet
+        // calculate travel cost 
+        int hour = road.hCost;
+        int min = road.mCost;
+        if(nextLoc.activities != null)
+        {
+          
+            
+            int totalMRef = nextLoc.activities[0].startH * 60 + nextLoc.activities[0].startM;
+            int total = (GameManager.singleton.currentHour+hour) * 60 + GameManager.singleton.currentMinute+min;
+            if (totalMRef > total)
+            {
+                min += totalMRef - total;
+            }
+            Debug.Log(hour + " " + min);
+            hour += nextLoc.activities[0].durationH;
+            min += nextLoc.activities[0].durationM;
+        }
+
+        Debug.Log(hour + " " + min);
+        GameManager.singleton.ChangeTime(hour,min);
+        //should not be here 
     }
 }

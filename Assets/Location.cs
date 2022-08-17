@@ -10,11 +10,14 @@ public class Location : MonoBehaviour, IPointerClickHandler
     public bool canMove;
     public int timeCostH = 0;
     public int timeCostM = 0;
+    public Activity[] activities;
     public void OnPointerClick(PointerEventData eventData)
     {
         if (canMove)
         {
             player.ChangeLocation(this);
+            if (activities != null)
+                GameManager.singleton.Eval(activities[0].name);
         }
         
     }

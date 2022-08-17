@@ -342,6 +342,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 0
+  activities: []
 --- !u!114 &436104199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,8 +494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 62.0123, y: 59.8416}
+  m_AnchoredPosition: {x: -0.0000071526, y: 2}
+  m_SizeDelta: {x: 48.6223, y: 45.4216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &521544250
 MonoBehaviour:
@@ -611,6 +612,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 0
+  activities: []
 --- !u!114 &703365645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,6 +863,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 1
   timeCostM: 20
+  activities: []
 --- !u!114 &822120520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,6 +1211,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 0
+  activities: []
 --- !u!1 &1136165007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1342,14 @@ MonoBehaviour:
   timeShow: {fileID: 1294948100}
   currentHour: 6
   currentMinute: 0
+  sampleGoal:
+    name: Sample Activity
+    startH: 7
+    startM: 0
+    dueH: 10
+    dueM: 0
+    durationM: 0
+    durationH: 3
 --- !u!1 &1256959896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1697,14 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 30
+  activities:
+  - name: Sample Activity
+    startH: 7
+    startM: 0
+    dueH: 10
+    dueM: 0
+    durationM: 0
+    durationH: 3
 --- !u!1 &1661611167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,6 +1761,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 0
+  activities: []
 --- !u!114 &1661611170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2087,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 0
+  activities: []
 --- !u!1 &1920822054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2182,7 @@ MonoBehaviour:
   canMove: 0
   timeCostH: 0
   timeCostM: 0
+  activities: []
 --- !u!1 &1941194003
 GameObject:
   m_ObjectHideFlags: 0

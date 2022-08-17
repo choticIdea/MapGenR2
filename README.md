@@ -1,1 +1,1 @@
-# MapGenRE
+# MapGen

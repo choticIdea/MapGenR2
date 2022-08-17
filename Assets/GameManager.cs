@@ -10,26 +10,44 @@ public struct EdgeWeight
     public int hCost;
     public int mCost;
 }
+[System.Serializable]
+public struct Activity
+{
+    public string name;
+    public int startH;
+    public int startM;
+    public int dueH;
+    public int dueM;
+    public int durationM;
+    public int durationH;
+    //public string location; just in case 
+}
 public class GameManager : MonoBehaviour
 {
     public GameObject timeShow;
     public int currentHour = 6;
     public int currentMinute = 0;
     public static GameManager singleton;
-
+    public Activity sampleGoal;
     private void Awake()
     {
-        if(singleton == null)
+        if (singleton == null)
         {
             singleton = this;
-        }        
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
         showTime();
     }
-
+    //Prototype evaluation func
+    public void Eval (string activityName){
+        if (activityName.Equals(sampleGoal.name))
+        {
+            Debug.Log("This sample is ok !");
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -37,7 +55,7 @@ public class GameManager : MonoBehaviour
     }
     public void ChangeTime(int hour,int minutes)
     {
-        Debug.Log("You all??");
+       
         currentHour += hour;
         currentMinute += minutes;
         showTime();
